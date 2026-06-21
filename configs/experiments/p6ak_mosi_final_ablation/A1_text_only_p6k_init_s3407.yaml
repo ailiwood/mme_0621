@@ -1,0 +1,51 @@
+ablation_name: A1_text_only_p6k_init
+cohort_id: mosi_official_tav_complete_case_v1
+data:
+  csv_path: data/mosi/label.csv
+  dataset: mosi
+  feature_root: data/processed/mosi_tav_v1
+  formal_mode: true
+  modalities: text
+data_version: mosi_tav_v1
+dataset: mosi
+modalities: text
+model:
+  audio_dim: 768
+  awaf_dropout: 0.1
+  freeze_text_base: false
+  hidden_dim: 256
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_r: 16
+  lora_targets:
+  - query
+  - value
+  modality_dropout_prob: 0.1
+  mode: text_only
+  slstm_bidirectional: false
+  slstm_dropout: 0.2
+  slstm_num_layers: 1
+  temporal_encoder: slstm
+  text_dropout: 0.1
+  text_mlp_hidden: 512
+  text_model_name: roberta-large
+  use_modal_layernorm: true
+  use_modality_dropout: true
+  vision_dim: 1024
+notes: 'A1: Text-only P6K init baseline'
+output:
+  exp_name: A1_text_only_p6k_init_s3407
+  root: outputs/P6AK_mosi_final_ablation
+phase: P6AK_ABLATION
+seed: 3407
+training:
+  batch_size: 8
+  early_stopping_patience: 8
+  epochs: 35
+  grad_accum_steps: 8
+  lr: 5.0e-05
+  lr_text_lora: 1.0e-05
+  min_epochs: 10
+  seed: 3407
+  test_final_once: true
+  weight_decay: 0.01

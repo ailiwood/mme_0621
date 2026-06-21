@@ -1,0 +1,17 @@
+{
+  "A1_text_only_p6k_init_s42": "OK",
+  "A1_text_only_p6k_init_s2024": "OK",
+  "A1_text_only_p6k_init_s3407": "OK",
+  "A2_no_audio_correction_s42": "OK",
+  "A2_no_audio_correction_s2024": "OK",
+  "A2_no_audio_correction_s3407": "OK",
+  "A3_no_vision_correction_s42": "OK",
+  "A3_no_vision_correction_s2024": "OK",
+  "A3_no_vision_correction_s3407": "OK",
+  "A4_no_reliability_gate_s42": "OK",
+  "A4_no_reliability_gate_s2024": "OK",
+  "A4_no_reliability_gate_s3407": "OK",
+  "A5_no_interaction_s42": "OK",
+  "A5_no_interaction_s2024": "OK",
+  "A5_no_interaction_s3407": "OK"
+}

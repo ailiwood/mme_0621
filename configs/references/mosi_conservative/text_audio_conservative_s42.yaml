@@ -1,0 +1,38 @@
+phase: REFERENCE
+dataset: mosi
+model_type: conservative_reference
+modality_mode: text_audio
+seed: 42
+notes: P6K text-audio conservative co-training reference. NOT AWAF evidence. ACC2=88.72%.
+data:
+  csv_path: data/mosi/label.csv
+  dataset: mosi
+  feature_root: data/features_strong_sequence_mosi_v3_T40
+  formal_mode: true
+model:
+  mode: text_audio_residual
+  audio_input_dim: 768
+  hidden_dim: 256
+  slstm_num_layers: 1
+  slstm_dropout: 0.2
+  text_model_name: roberta-large
+  text_mlp_hidden: 512
+  text_dropout: 0.1
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_targets:
+  - query
+  - value
+  freeze_text_base: false
+training:
+  batch_size: 4
+  grad_accum_steps: 16
+  epochs: 20
+  early_stopping_patience: 6
+  min_epochs: 5
+  lr: 3.0e-05
+  lr_text_lora: 3.0e-06
+  weight_decay: 0.03
+  seed: 42
+  test_final_once: true

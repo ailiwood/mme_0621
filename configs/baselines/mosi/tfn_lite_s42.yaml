@@ -1,0 +1,33 @@
+phase: BASELINE
+dataset: mosi
+model_name: tfn_lite
+model_type: baseline_lite
+modality_mode: text_audio
+seed: 42
+epochs: 12
+min_epochs: 3
+early_stopping_patience: 4
+monitor_metric: ACC2_Non0
+test_final_once: true
+data:
+  csv_path: data/mosi/label.csv
+  dataset: mosi
+  feature_root: data/features_strong_sequence_mosi_v3_T40
+  formal_mode: true
+model:
+  model_name: tfn_lite
+  modality_mode: text_audio
+  audio_input_dim: 768
+  text_input_dim: 1024
+  hidden_dim: 128
+  dropout: 0.2
+  use_pretrained_text: false
+training:
+  batch_size: 64
+  epochs: 12
+  early_stopping_patience: 4
+  min_epochs: 3
+  lr: 0.0003
+  weight_decay: 0.01
+  seed: 42
+  test_final_once: true

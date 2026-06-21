@@ -1,0 +1,49 @@
+# Local data and feature caches
+data/raw/
+data/processed/
+data/cache/
+data/local/
+
+# Local experiment evidence and outputs
+outputs/
+artifacts/
+local_final_evidence/
+local_archive/
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# Large features and serialized files
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Logs and runtime
+*.log
+logs/
+runs/
+wandb/
+tensorboard/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets and local environments
+.env
+.venv/
+venv/
