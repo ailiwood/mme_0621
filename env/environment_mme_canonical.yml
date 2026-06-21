@@ -1,8 +1,0 @@
-name: mme
-channels:
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - defaults
-dependencies:
-  - python=3.9
-  - datasets
